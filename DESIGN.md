@@ -1,10 +1,10 @@
-# Design: Common SDR Abstraction (sdr-source-rs)
+# Design: Common SDR Abstraction (orecchiette-sdr-source-rs)
 
-This document outlines the architectural and architectural design of the `sdr-source-rs` crate, which provides the common hardware abstraction layer for the SDR detection applications drone detection system.
+This document outlines the architectural and architectural design of the `orecchiette-sdr-source-rs` crate, which provides the common hardware abstraction layer for the SDR detection applications drone detection system.
 
 ## 1. Introduction
 
-`sdr-source-rs` defines a single unifying trait (`SdrSource`) and a shared set of primitives (`IqPacket`, `SourceConfig`, `DwellAdvice`, `DwellController`) that all SDR backends implement. This guarantees that the main orchestrator and the detector worker pool can process data identically, regardless of whether it originated from a USRP, HackRF, Aaronia Spectran, or an offline file.
+`orecchiette-sdr-source-rs` defines a single unifying trait (`SdrSource`) and a shared set of primitives (`IqPacket`, `SourceConfig`, `DwellAdvice`, `DwellController`) that all SDR backends implement. This guarantees that the main orchestrator and the detector worker pool can process data identically, regardless of whether it originated from a USRP, HackRF, Aaronia Spectran, or an offline file.
 
 ## 2. System Architecture
 

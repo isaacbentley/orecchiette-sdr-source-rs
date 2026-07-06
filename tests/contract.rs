@@ -9,7 +9,7 @@
 
 use crossbeam::channel::{bounded, unbounded};
 use num_complex::Complex32;
-use sdr_source_rs::{
+use orecchiette_sdr_source_rs::{
     DwellAdvice, IqPacket, SdrError, SdrHandle, SdrSource, SourceConfig, freq_key_khz,
 };
 use std::sync::Arc;
@@ -50,8 +50,7 @@ impl SdrSource for MockSource {
                 if stop_rx.try_recv().is_ok() {
                     break;
                 }
-                let samples =
-                    sdr_source_rs::PooledIqBuffer::new_unpooled(vec![
+                let samples = orecchiette_sdr_source_rs::PooledIqBuffer::new_unpooled(vec![
                         Complex32::new(i as f32, 0.0);
                         16
                     ]);

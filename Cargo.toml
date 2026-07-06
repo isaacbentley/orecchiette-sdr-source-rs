@@ -1,5 +1,5 @@
 [package]
-name = "sdr-source-rs"
+name = "orecchiette-sdr-source-rs"
 license = "GPL-3.0-or-later"
 version = "0.1.0"
 edition = "2024"

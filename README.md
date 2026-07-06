@@ -1,6 +1,6 @@
-# 🔌 sdr-source-rs: Common SDR Abstraction
+# 🔌 orecchiette-sdr-source-rs: Common SDR Abstraction
 
-[![CI](https://github.com/isaacbentley/sdr-source-rs/actions/workflows/ci.yml/badge.svg)](https://github.com/isaacbentley/sdr-source-rs/actions/workflows/ci.yml)
+[![CI](https://github.com/isaacbentley/orecchiette-sdr-source-rs/actions/workflows/ci.yml/badge.svg)](https://github.com/isaacbentley/orecchiette-sdr-source-rs/actions/workflows/ci.yml)
 [![MSRV](https://img.shields.io/badge/rustc-1.85+-ab6000.svg)](https://blog.rust-lang.org/2025/02/20/Rust-1.85.0.html)
 
 ## 🎯 **Overview**
@@ -88,4 +88,4 @@ This project is licensed under the GNU General Public License v3.0 or later (GPL
 
 ## 📞 **Support**
 
-- 🐛 **Issues**: [GitHub Issues](https://github.com/isaacbentley/sdr-source-rs/issues)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/isaacbentley/orecchiette-sdr-source-rs/issues)
