@@ -3,9 +3,11 @@ name = "orecchiette-sdr-source-rs"
 license = "GPL-3.0-or-later"
 version = "0.1.0"
 edition = "2024"
-rust-version = "1.85"
-
 description = "Common abstraction for SDR sources used by SDR detection applications."
+repository = "https://github.com/isaacbentley/orecchiette-sdr-source-rs"
+readme = "README.md"
+keywords = ["sdr", "rf", "iq", "trait"]
+categories = ["hardware-support", "api-bindings"]
 
 [dependencies]
 crossbeam = "0.8"

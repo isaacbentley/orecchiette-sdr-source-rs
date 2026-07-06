@@ -52,11 +52,11 @@ impl PooledIqBuffer {
 
 impl Drop for PooledIqBuffer {
     fn drop(&mut self) {
-        if let Some(mut vec) = self.vec.take() {
-            if let Some(recycler) = &self.recycler {
-                vec.clear();
-                let _ = recycler.send(vec);
-            }
+        if let Some(mut vec) = self.vec.take()
+            && let Some(recycler) = &self.recycler
+        {
+            vec.clear();
+            let _ = recycler.send(vec);
         }
     }
 }
