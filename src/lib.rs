@@ -56,7 +56,7 @@ impl Drop for PooledIqBuffer {
             && let Some(recycler) = &self.recycler
         {
             vec.clear();
-            let _ = recycler.send(vec);
+            let _ = recycler.try_send(vec);
         }
     }
 }
