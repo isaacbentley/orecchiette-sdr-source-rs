@@ -120,6 +120,20 @@ pub struct SourceConfig {
 /// observed on that frequency.
 pub trait DwellAdvice: Send + Sync {
     fn latest_signal_at(&self, freq_key_khz: u64) -> Option<Instant>;
+
+    /// `Some(freq_hz)` ⇒ a live viewer wants this exact channel: tune here
+    /// and hold continuously, ignoring the hop list and dwell schedule,
+    /// until this returns a different value or `None`. `None` (the default)
+    /// means "no override — hop normally."
+    ///
+    /// Polled once per outer hop iteration, same cadence as
+    /// `latest_signal_at`. Defaulted so existing `DwellAdvice`
+    /// implementations (and the backends that call this trait) keep
+    /// compiling unchanged; only orchestrators that want park-on-channel
+    /// live view need to override it.
+    fn channel_override(&self) -> Option<f64> {
+        None
+    }
 }
 
 /// An SDR backend.
